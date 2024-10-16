@@ -1,0 +1,200 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px; /* Adjust logo size as needed */
+}
+
+header h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.4rem;
+    font-style: italic;
+}
+
+hr {
+    margin: 10px auto;
+    width: 80px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+/* Image Gallery */
+.gallery {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.gallery-content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 300px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    object-fit: contain; /* Ensures the whole image is visible */
+    border: 5px solid white; /* Border for the images */
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+    filter: grayscale(100%); /* Black and white effect */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* About Section */
+.about {
+    text-align: left;
+    padding: 40px 0;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.about .info {
+    font-size: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    line-height: 1.8;
+}
+
+/* Services Section */
+.services {
+    text-align: left;
+    padding: 40px 0;
+    background-color: #282828;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.services .list ul {
+    font-size: 1.4rem;
+    margin: 15px 0;
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.services .list ul li {
+    margin-bottom: 10px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding: 40px 0;
+    position: sticky; /* Make the contact section sticky */
+    top: 0; /* Stick to the top of the viewport */
+    background-color: #000; /* Maintain background color */
+    z-index: 10; /* Ensure it's above other sections */
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.contact ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.contact ul li {
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .about .info,
+    .services .list {
+        width: 100%;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+
+    .services h2, 
+    .about h2, 
+    .contact h2 {
+        font-size: 2rem;
+    }
+}
